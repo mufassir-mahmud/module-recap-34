@@ -16,12 +16,15 @@
             <input id="search-box" type="text" placeholder="Search here" class="input input-bordered input-info w-full max-w-xs" />
             <button onclick="handlClick()" class="btn btn-outline btn-accent">Search</button>
         </section>
-        <section>
+        <section class="my-8">
             <input id="search-box2" type="text" placeholder="Search here" class="input input-bordered input-error w-full max-w-xs" />
             <button onclick="handlClick2()" class="btn btn-outline btn-secondary">Search</button>
         </section>
 
         <section >
+            <div id="loading-spinner" class="my-28 text-center hidden">
+                <span class="loading loading-spinner text-primary ="></span>
+            </div>
             <div id="phone-container" class="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 
             </div>
