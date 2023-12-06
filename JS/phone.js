@@ -43,12 +43,12 @@ const handlClick = () =>{
     const searchText = searchBox.value;
     loadPhone(searchText)
 }
-const handlClick2 = () =>{
-  toggleLoading(true)
-  const searchBox2 = document.getElementById('search-box2');
-  searchText2 = searchBox2.value;
-  loadPhone(searchText2)
-}
+// const handlClick2 = () =>{
+//   toggleLoading(true)
+//   const searchBox2 = document.getElementById('search-box2');
+//   searchText2 = searchBox2.value;
+//   loadPhone(searchText2)
+// }
 const toggleLoading = (isloading) =>{
   const loadingSpiner = document.getElementById('loading-spinner');
   if(isloading){
