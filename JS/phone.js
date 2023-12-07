@@ -30,8 +30,8 @@ const displayPhones = (phones,isShowAll) =>{
         <div class="card-body">
           <h2 class="card-title">${phone.phone_name}</h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+          <div class="card-actions justify-center">
+            <button onclick="showDetails('${phone.slug}')" class="btn btn-primary">Buy Now</button>
           </div>
         </div>
         
@@ -48,12 +48,7 @@ const handlClick = (isShowAll) =>{
     const searchText = searchBox.value;
     loadPhone(searchText,isShowAll)
 }
-// const handlClick2 = () =>{
-//   toggleLoading(true)
-//   const searchBox2 = document.getElementById('search-box2');
-//   searchText2 = searchBox2.value;
-//   loadPhone(searchText2)
-// }
+
 const toggleLoading = (isloading) =>{
   const loadingSpiner = document.getElementById('loading-spinner');
   if(isloading){
@@ -62,6 +57,13 @@ const toggleLoading = (isloading) =>{
   else{
     loadingSpiner.classList.add('hidden')
   }
+}
+
+const showDetails = async (id) =>{
+  console.log(id);
+  const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+  const data = await res.json();
+  console.log(data.data);
 }
 const handleShow = () =>{
   handlClick(true)
